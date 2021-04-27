@@ -39,17 +39,17 @@ def division(number):
 
 def soustraction(number):
     list_numbers = []
-    while number.isdigit: # do_something
+    while number.isdigit(): # do_something == refactoring possible ici 
         if number.isdigit():
-            list_numbers.append(number) # do_something
+            list_numbers.append(int(number)) # do_something== modification of variable type
         number = ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
-    i = 0
+    result = 0    # modification of i to become result
     for list_number in list_numbers:
-        if i == 0:
+        if list_numbers == 0:    # modification of i to become list_numbers
             result = list_number
         else:
             result = result - list_number
-        i = i + 1
+    # deletion of i incrementation 
     return result
 
 def display_interface():
