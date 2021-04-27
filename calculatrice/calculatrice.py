@@ -8,7 +8,7 @@ def addition(number): # do_something== correction of function name
         if number.isdigit():
             list_numbers.append(int(number))
         number = ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
-    result = list_numbers # do_something
+    result = sum(list_numbers) # do_something ==  sum function to return the sum of list items
     return result
 
 def multplication(number):
