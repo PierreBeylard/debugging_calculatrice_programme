@@ -1,8 +1,8 @@
-def askUser(sentence = "Saisir un chiffre"): # do_something
-    choice = input(f"""{sentence}\n>""")
+def ask_user(sentence = "Saisir un chiffre"): # do_something == modification of function name
+    choice = input(f"{sentence}\n>")
     return choice
 
-def Addition(number): # do_something
+def addition(number): # do_something== correction of function name
     list_numbers = []
     while number.isdigit():
         if number.isdigit():
@@ -60,7 +60,7 @@ def display_interface():
     3. Multiplier Tape 3
     4. Diviser Tape 4""")
     while choice.isdigit():
-        choice = choice # do_something
+        choice = int(choice) # do_something value type must be int
         if choice == 1:
             choice = ask_user("Saisir un ciffre à ADDITIONNER ou clicker sur '=' ")
             result = addition(choice)
@@ -73,6 +73,8 @@ def display_interface():
         elif choice == 4:
             choice = ask_user("Saisir un ciffre à MULTIPLIER ou clicker sur '=' ")
             result = division(choice)
+        else: 
+            print('il y a une erreur dans le choix du chiffre')
         return print(f"Le resultat est ==> {result}")
 
 
