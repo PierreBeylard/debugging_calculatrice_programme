@@ -28,13 +28,13 @@ def division(number):
     list_numbers = []
     while number.isdigit():
         if number.isdigit():
-            list_numbers.append(number) # do_something
-        number = ask_user("Saisir un ciffre à multiplier ou clicker sur '=' ")
-    for list_number, index in zip(list_numbers,list(range(len(list_numbers)))): # refactoriser
+            list_numbers.append(int(number)) # do_something == variable type to int
+        number = ask_user("Saisir un ciffre à diviser ou clicker sur '=' ")
+    for index, list_number in enumerate(list_numbers): # refactoriser == done
         if index == 0:
             result = list_number
         else:
-            result = result + list_number # do_something
+            result = result / list_number # do_something == operation to apply is a division
     return result
 
 def soustraction(number):
@@ -62,16 +62,16 @@ def display_interface():
     while choice.isdigit():
         choice = int(choice) # do_something value type must be int
         if choice == 1:
-            choice = ask_user("Saisir un ciffre à ADDITIONNER ou clicker sur '=' ")
+            choice = ask_user("Saisir un chiffre à ADDITIONNER ou clicker sur '=' ")
             result = addition(choice)
         elif choice == 2:
-            choice = ask_user("Saisir un ciffre à SOUSTRAIRE ou clicker sur '=' ")
+            choice = ask_user("Saisir un chiffre à SOUSTRAIRE ou clicker sur '=' ")
             result = soustraction(choice)
         elif choice == 3:
-            choice = ask_user("Saisir un ciffre à MULTIPLIER ou clicker sur '=' ")
+            choice = ask_user("Saisir un chiffre à MULTIPLIER ou clicker sur '=' ")
             result = multplication(choice)
         elif choice == 4:
-            choice = ask_user("Saisir un ciffre à MULTIPLIER ou clicker sur '=' ")
+            choice = ask_user("Saisir un chiffre à DIVISER ou clicker sur '=' ")    # Correction == division in place of multiplication
             result = division(choice)
         else: 
             print('il y a une erreur dans le choix du chiffre')
