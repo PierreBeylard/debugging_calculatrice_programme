@@ -15,13 +15,13 @@ def multplication(number):
     list_numbers = []
     while number.isdigit():
         if number.isdigit():
-            list_numbers.append(number) # do_something
+            list_numbers.append(int(number)) # do_something=== modification of the type of variable 'number' 
         number = ask_user("Saisir un ciffre à multiplier ou clicker sur '=' ")
-    for list_number, index in zip(list_numbers,list(range(len(list_numbers)))): # refactoriser
-        if index == '0': # do_something
+    for index, list_number in enumerate(list_numbers):   # refactorisation
+        if index == 0: # do_something == list elemets types are int not string 
             result = list_number
         else:
-            result = result / list_number # do_something
+            result *= list_number # do_something == we multiply result by the new list_number item
     return result
 
 def division(number):
