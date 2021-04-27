@@ -5,8 +5,7 @@ def ask_user(sentence = "Saisir un chiffre"): # do_something == modification of 
 def addition(number): # do_something== correction of function name
     list_numbers = []
     while number.isdigit():
-        if number.isdigit():
-            list_numbers.append(int(number))
+        list_numbers.append(int(number))
         number = ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
     result = sum(list_numbers) # do_something ==  sum function to return the sum of list items
     return result
