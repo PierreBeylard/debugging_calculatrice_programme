@@ -6,8 +6,8 @@ def start_programm(message='Bienvenue'):
     calculette=calculatrice.Calculette(message="C'est un programme orienté objet")
     view.display_interface(calculette)
 
-def make_operation(choice,operator,calculette): 
-    result= calculatrice.numbers_caption(choice,operator)
+def launch_operation(choice,calculette,operator): 
+    result= calculette.make_operation(operator,choice)
     return result 
     
 def ask_user(message=''):

@@ -19,19 +19,19 @@ def display_interface(calculette):
         if choice == 1:
             choice = ask_user("Saisir un chiffre à ADDITIONNER ou clicker sur '=' ")
             operator="a"
-            result = control.make_operation(choice,calculette, operator)
+            result = control.launch_operation(choice,calculette, operator)
         elif choice == 2:
             choice = ask_user("Saisir un chiffre à SOUSTRAIRE ou clicker sur '=' ")
             operator="s"
-            result = control.make_operation(choice,calculette, operator)
+            result = control.launch_operation(choice,calculette, operator)
         elif choice == 3:
             choice = ask_user("Saisir un chiffre à MULTIPLIER ou clicker sur '=' ")
             operator="m"
-            result = control.make_operation(choice,calculette, operator)
+            result = control.launch_operation(choice,calculette, operator)
         elif choice == 4:
             choice = ask_user("Saisir un chiffre à DIVISER ou clicker sur '=' ")
             operator="d"
-            result = control.make_operation(choice,calculette, operator)
+            result = control.launch_operation(choice,calculette, operator)
         else: 
             choice = ask_user("""
     Tu veux :

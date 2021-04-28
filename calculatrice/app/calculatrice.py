@@ -1,21 +1,22 @@
 from app import control
 
 class Calculette: 
+
     def __init__(self, message='Bonjour à tous'):
         self.welcome = message
         print(self.welcome)
 
-    def make_operation(self, choice, operator):
-        list_numbers = Calculette.numbers_caption(choice)
-        result = Calculette.calculation(choice, operator)  
+    def make_operation(self, operator, choice):
+        list_numbers = Calculette.numbers_caption(choice,operator)
+        result = Calculette.calculation(list_numbers, operator)  
         return result
 
     @classmethod
-    def numbers_caption(cls,number): 
+    def numbers_caption(cls,number,operator): 
         list_numbers = []
         while number.isdigit():
             list_numbers.append(int(number))
-            number = ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
+            number = control.ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
         return list_numbers
 
     @classmethod
@@ -29,7 +30,7 @@ class Calculette:
                 elif operator == 'd':
                     result = result / list_number
                 elif operator == 's':
-                    paresult = result - list_numberss
+                    result = result - list_number
                 elif operator == 'm':
                     result *= list_number 
         return result
