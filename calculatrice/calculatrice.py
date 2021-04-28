@@ -17,11 +17,7 @@ def addition(number): # do_something== correction of function name
     return result
 
 def multplication(number):
-    list_numbers = []
-    while number.isdigit():
-        # supression of if condition 
-        list_numbers.append(int(number)) # do_something=== modification of the type of variable 'number' 
-        number = ask_user("Saisir un ciffre à multiplier ou clicker sur '=' ")
+    list_numbers=numbers_caption(number)
     for index, list_number in enumerate(list_numbers):   # refactorisation
         if index == 0: # do_something == list elemets types are int not string 
             result = list_number
@@ -30,10 +26,7 @@ def multplication(number):
     return result
 
 def division(number):
-    list_numbers = []
-    while number.isdigit():
-        list_numbers.append(int(number)) # do_something == variable type to int
-        number = ask_user("Saisir un ciffre à diviser ou clicker sur '=' ")
+    list_numbers=numbers_caption(number)
     for index, list_number in enumerate(list_numbers): # refactoriser == done
         if index == 0:
             result = list_number
@@ -42,12 +35,9 @@ def division(number):
     return result
 
 def soustraction(number):
-    list_numbers = []
-    while number.isdigit(): # do_something == refactoring possible ici 
-        list_numbers.append(int(number)) # do_something== modification of variable type
-        number = ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
+    list_numbers=numbers_caption(number)
     result = 0    # modification of i to become result
-    for list_number in list_numbers:
+    for list_numbers in list_numbers:
         if list_numbers == 0:    # modification of i to become list_numbers
             result = list_number
         else:
