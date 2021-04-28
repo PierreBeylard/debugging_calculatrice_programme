@@ -2,12 +2,17 @@ def ask_user(sentence = "Saisir un chiffre"): # do_something == modification of 
     choice = input(f"{sentence}\n>")
     return choice
 
-def addition(number): # do_something== correction of function name
+def numbers_caption (number): 
     list_numbers = []
     while number.isdigit():
         # supression of if condition 
         list_numbers.append(int(number))
         number = ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
+    return list_numbers
+
+
+def addition(number): # do_something== correction of function name
+    list_numbers=numbers_caption(number)
     result = sum(list_numbers) # do_something ==  sum function to return the sum of list items
     return result
 
