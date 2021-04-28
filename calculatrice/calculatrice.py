@@ -37,7 +37,8 @@ def division(number):
 def soustraction(number):
     list_numbers=numbers_caption(number)
     result = 0    # modification of i to become result
-    for list_numbers in list_numbers:
+    for list_number in list_numbers:
+        print(list_number)
         if list_numbers == 0:    # modification of i to become list_numbers
             result = list_number
         else:
