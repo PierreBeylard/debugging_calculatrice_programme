@@ -1,4 +1,5 @@
-from calculatrice import display_interface
-print(f"{'*-'*15} Bienvenue sur la calculatrice de Léa et Pierre ! {'*-'*15}")
+from app.control import start_programm
 
-display_interface()
+print(f"{'*-'*15} Bienvenue sur la calculatrice de Léa et Pierre ! {'-*'*15}")
+
+start_programm(message=f"{'*-'*15} Bienvenue sur la calculatrice de Léa et Pierre ! {'-*'*15}")
