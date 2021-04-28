@@ -7,8 +7,7 @@ def start_programm(message='Bienvenue'):
     view.display_interface(calculette)
 
 def make_operation(choice,operator,calculette): 
-    result= calculatrice.numbers_caption(choice)
-    
+    result= calculatrice.numbers_caption(choice,operator)
     return result 
     
 def ask_user(message=''):

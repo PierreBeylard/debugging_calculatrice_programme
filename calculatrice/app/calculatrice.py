@@ -6,12 +6,12 @@ class Calculette:
         print(self.welcome)
 
     def make_operation(self, choice, operator):
-        numbers_caption
-        calculation #ajouter l'operator 
-        pass
+        list_numbers = Calculette.numbers_caption(choice)
+        result = Calculette.calculation(choice, operator)  
+        return result
 
     @classmethod
-    def numbers_caption(number): 
+    def numbers_caption(cls,number): 
         list_numbers = []
         while number.isdigit():
             list_numbers.append(int(number))
@@ -19,13 +19,19 @@ class Calculette:
         return list_numbers
 
     @classmethod
-    def calculation(list_numbers,operator):
+    def calculation(cls,list_numbers,operator):
         for index, list_number in enumerate(list_numbers):   # refactorisation
             if index == 0: # do_something == list elemets types are int not string 
                 result = list_number
             else:
-                if ope
-                result *= list_number # do_something == we multiply result by the new list_number item
+                if operator == 'a':
+                    result += list_number 
+                elif operator == 'd':
+                    result = result / list_number
+                elif operator == 's':
+                    paresult = result - list_numberss
+                elif operator == 'm':
+                    result *= list_number 
         return result
 """
 
