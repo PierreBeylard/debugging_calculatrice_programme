@@ -37,9 +37,8 @@ def division(number):
 def soustraction(number):
     list_numbers=numbers_caption(number)
     result = 0    # modification of i to become result
-    for list_number in list_numbers:
-        print(list_number)
-        if list_numbers == 0:    # modification of i to become list_numbers
+    for index, list_number in enumerate(list_numbers):
+        if index == 0:    # modification of i to become list_numbers
             result = list_number
         else:
             result = result - list_number
@@ -68,7 +67,13 @@ def display_interface():
             choice = ask_user("Saisir un chiffre à DIVISER ou clicker sur '=' ")    # Correction == division in place of multiplication
             result = division(choice)
         else: 
-            print('il y a une erreur dans le choix du chiffre')
+            choice = ask_user("""
+            Tu veux :
+            1. Additionner Tape 1
+            2. Soustraire Tape 2
+            3. Multiplier Tape 3
+            4. Diviser Tape 4""")
+            continue
         return print(f"Le resultat est ==> {result}")
 
 
