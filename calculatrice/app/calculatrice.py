@@ -16,7 +16,7 @@ class Calculette:
         list_numbers = []
         while number.isdigit():
             list_numbers.append(int(number))
-            number = control.ask_user("Saisir un ciffre à additionner ou clicker sur '=' ")
+            number = control.ask_user(f"Saisir un ciffre à {operator} ou clicker sur '=' ")
         return list_numbers
 
     @classmethod
@@ -25,13 +25,13 @@ class Calculette:
             if index == 0: # do_something == list elemets types are int not string 
                 result = list_number
             else:
-                if operator == 'a':
+                if operator == 'additionner':
                     result += list_number 
-                elif operator == 'd':
+                elif operator == 'diviser':
                     result = result / list_number
-                elif operator == 's':
+                elif operator == 'soustraire':
                     result = result - list_number
-                elif operator == 'm':
+                elif operator == 'multiplier':
                     result *= list_number 
         return result
 """
